@@ -12,6 +12,7 @@ La automatización de pruebas utiliza Java 11 como lenguaje de programación y e
 
 ## Requisitos de Ejecución
 
-Se recomienda usar Java 11 para las automatizacion, ejecutar el test con JUnit ya creado o con el comando "gradle clean test aggregate".
+- Se recomienda usar Java 11 para las automatizacion, ejecutar el test con JUnit ya creado o con el comando "gradle clean test aggregate".
+- en el archivo file.properties escribir el usuario, email y contraseña que desea registrar.
 
 *By: James Muñoz*
