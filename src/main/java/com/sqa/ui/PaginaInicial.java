@@ -7,6 +7,6 @@ import org.openqa.selenium.By;
 public class PaginaInicial extends PageObject {
 
     public static final Target BOTON_MI_CUENTA = Target.the("Boton ir a mi cuenta")
-            .located(By.xpath(""));
+            .located(By.xpath("(//a[@id='menuUserLink'])"));
 
 }
