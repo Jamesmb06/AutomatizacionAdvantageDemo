@@ -9,7 +9,6 @@ import java.util.Properties;
 
 public class LoadCredentials {
 
-    // Método estático que devuelve una lista de Strings con las credenciales cargadas desde un archivo de propiedades
     public static List<String> getCredentials() throws IOException {
         List<String> credentials = new ArrayList<>();
         Properties p = new Properties();

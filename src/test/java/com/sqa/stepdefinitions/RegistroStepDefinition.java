@@ -7,7 +7,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -23,6 +22,7 @@ public class RegistroStepDefinition extends Configuracion {
 
     private final List<String> credentials = getCredentials();
     public static Logger LOGGER = Logger.getLogger(RegistroStepDefinition.class);
+
     public RegistroStepDefinition() throws IOException {
     }
 
@@ -73,7 +73,6 @@ public class RegistroStepDefinition extends Configuracion {
             quitarDriver();
         }
     }
-
     @Then("el usuario debe ver su nombre en la pagina principal")
     public void elUsuarioDebeVerSuNombreEnLaPaginaPrincipal() {
         try {

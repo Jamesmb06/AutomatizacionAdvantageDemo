@@ -28,7 +28,7 @@ public class Configuracion {
 
     private void configurarDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");  // Habilita el modo incógnito
+        options.addArguments("--incognito");
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver(options);
     }
