@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import java.io.IOException;
 import java.util.List;
@@ -13,9 +14,7 @@ import java.util.List;
 import static com.sqa.questions.ValidarUsuarioCreado.validarUsuarioCreado;
 import static com.sqa.tasks.LlenarDatosRegistro.llenarDatosRegistro;
 import static com.sqa.tasks.NavegarAlRegistro.navegarAlRegistro;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static com.sqa.util.LoadCredentials.getCredentials;
 
 public class RegistroStepDefinition extends Configuracion {
@@ -77,14 +76,13 @@ public class RegistroStepDefinition extends Configuracion {
     public void elUsuarioDebeVerSuNombreEnLaPaginaPrincipal() {
         try {
             LOGGER.info("Verificando que el usuario vea el nombre del usuario creado");
-            theActorInTheSpotlight().should(
-                    seeThat(validarUsuarioCreado(), equalTo("JamesSQ"))
-            );
+            String nombreUsuario = theActorInTheSpotlight().asksFor(validarUsuarioCreado());
+            Assert.assertEquals("JamesSQ", nombreUsuario);
             LOGGER.info("usuario creado validado correctamente");
         } catch (Exception e) {
             LOGGER.info("error al validar el usuario creado");
             LOGGER.warn(e.getMessage());
-            Assertions.fail();
+            Assert.fail("Assertion failed");
             quitarDriver();
         }
     }

@@ -37,7 +37,7 @@ public class Configuracion {
         webDriver.manage().window().maximize();
     }
 
-    protected void quitarDriver() {
+    public void quitarDriver() {
         webDriver.quit();
     }
 
