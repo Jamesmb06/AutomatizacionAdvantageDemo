@@ -13,7 +13,7 @@ La automatización de pruebas utiliza Java 11 como lenguaje de programación y e
 ## Requisitos de Ejecución
 
 - Se recomienda usar Java 11 para las automatizacion, ejecutar el test con JUnit ya creado o con el comando "gradle clean test aggregate".
-- en el archivo file.properties escribir el usuario, email y contraseña que desea registrar y en el stepDefinition, escribir en el valor esperado eescribir el usuario a registrar
+- en el archivo file.properties escribir el usuario, email y contraseña que desea registrar y en el stepDefinitioN escribir en el valor esperado del usuario a registrar
 para validar la aserción.
 
 ***NOTA: LOS USUARIOS QUEDAN REGISTRADOS EN LA PÁGINA ENTONCES AL CORRER EL TEST PARA VERIFICAR LA ASERCIÓN SE DEBE ESCRIBIR UN NUEVO USUARIO***
