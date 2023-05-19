@@ -7,9 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features.registro.feature"},
-        glue = {"com.sofkau.stepdefinitions"}
-
+        features = {"src/test/resources/features/registro.feature"},
+        glue = {"com.sqa.stepdefinitions"}
 
 )
 public class RegistroTest {
